@@ -1,0 +1,7 @@
+This directory holds scripts that should be run (and stored) on the SLAC servers.
+
+The *build* scripts are to create ROOT data sets with certain initial filters.
+
+The *create* scripts are to perform cuts on those initial data sets.
+
+In other words, the build scripts filter on RUNS and the create scripts filter on EVENTS.
