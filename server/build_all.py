@@ -1,13 +1,7 @@
 #!/usr/bin/env python
 README = """
 This script should be run at SLAC where it has access to the EXO200 data.
-This script finds alpha like events, and classifies them, and saves them for
-further analsysis.
-
-Phase2a started Oct 5th, ended April 16th (runs 2464-3564)
-    This is marked by U-wire shaping time change?
-
-AlphaIon run list 
+It creates a file with all runs from Phase II.
 """
 
 import ROOT
