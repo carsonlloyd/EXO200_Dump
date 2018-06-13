@@ -143,10 +143,6 @@ def get_run_list(list = 'All', rebuild=False):
     if list == 'All':
         run_list = get_all_runs_list()
 
-    # NOTE: THIS ISN'T FUNCTIONING YET
-    #The conditions data stores when data_quality group marks parts of data runs BAD
-    #Grabbing bad times in-case we want to cut these out...
-    #bad_times = get_bad_time_data()
     return run_list
 
 
@@ -154,7 +150,7 @@ def get_run_list(list = 'All', rebuild=False):
 def get_all_runs_list():
     list = "masked"
     """
-    This gets all runs in the data-catalogue that are masked, type=Data-Physics, and run>=7104 (Phase 2)
+    *** This gets all runs in the data-catalogue that are masked, type=Data-Physics, and run>=7104 (Phase 2)
     """
     all_ds = ROOT.EXORunInfoManager.GetDataSet("Data/Processed/%s"%list,"runType==\"Data-Physics\" && run>=7104")
     run_info = {}

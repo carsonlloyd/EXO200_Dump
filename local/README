@@ -1,0 +1,20 @@
+The scripts in this directory can/should be run on your local machine. You will need to copy the data files from the SLAC servers first.
+
+The *training* files are an edited version of Erica's MLtraining.py. They take the .pkl files and do all the machine learning.
+Each one was changed mostly just to handle the different data that I collected into the ROOT/pkl files depending on which analysis section I was doing.
+
+The scint_vs_charge.py script uses one of the .pkl files and will plot the general scintillation vs charge plot.
+
+The Matlab scripts:
+	surfPlots.m manipulates the surface data and creates the plots that I used.
+	vscript.m manipulates the drift velocity data and creates the plots that I used.
+
+Note:
+	I used Canopy as a Python IDE, because it easily installs/imports Python packages in one place.
+	I also saved my .pkl files into .mat files for use in Matlab by doing this in Canopy:
+		`import scipy.io
+		`import cPickle
+		`data = cPickle.load(open("filename.pkl","r"))
+		`scipy.io.savemat('filename.mat',data)
+
+		You can actually save any type of dictionary or array structure from Python into .mat files via this method, so if you want to manipulate your data within Python and then export them to a .mat to use Matlab/my scripts you can do that as well.
