@@ -1,8 +1,33 @@
 Here is some random stuff that might be helpful, but wasn't big enough to be on its own:
 
+----------------------------------------------------------------------------
+----- SLAC SERVER SETUP INFO
+
 Make sure you have this in your shell source file on the SLAC server (~/.cshrc or ~/.bashrc etc.): source /nfs/slac/g/exo/software/hudson/builds-rhel6-64/trunk/setup.csh
 
 Make yourself a directory on the SLAC servers in /nfs/slac/g/exo/. (For instance, mine is /nfs/slac/g/exo/clloyd/.)
 The disk(s) that directory is on are made for data (more storage and I think faster). You should do any heavy data runs or script running to that location, thus most of your work will happen here, not your natural home directory
 
-.
+----------------------------------------------------------------------------
+----- SUBMITTING JOBS TO THE CLUSTER
+
+http://www.slac.stanford.edu/exp/glast/wb/prod/pages/installingOfflineSW/usingSlacBatchFarm.htm
+
+To submit jobs:
+	bsub -W <length in minutes> <relative path to script> <arguments>
+To view jobs submitted/running:
+	bjobs
+
+----------------------------------------------------------------------------
+----- SOFTWARE INFORMATION
+
+Canopy: https://store.enthought.com/downloads/
+Matlab: free from Drexel software webpage
+
+----------------------------------------------------------------------------
+----- OTHER INFORMATIONAL LINKS
+
+Phase I Phase II Descriptions: https://confluence.slac.stanford.edu/display/exo/EXOProcessData+--+Phase+I+and+Phase+II+Data+Locations
+Run logs: http://exo-data.slac.stanford.edu/ExoRunHistory/
+Current run logs (?): http://exo-data.slac.stanford.edu/logbook/daylogtoday.php
+Not sure: http://exo.stanford.edu/EXO200/Executable/
